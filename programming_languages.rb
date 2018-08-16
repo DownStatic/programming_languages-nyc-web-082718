@@ -6,7 +6,7 @@ def reformat_languages(languages)
       new_hash[language] = {
         :type => type[:type]
       }
-      if new_hash[language][:style]
+      if new_hash[language][:style].type == "Array"
           new_hash[language][:style] << style
       else
           new_hash[language][:style] = [style]
