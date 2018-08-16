@@ -7,12 +7,12 @@ def reformat_languages(languages)
         :type => type[:type]
       }
       if new_hash[language][:style] == nil
-          new_hash[language][:style] = [new_hash[language][:style]]
-          new_hash[language] << style
+          new_hash[language][:style] = [style]
       else
-          new_hash[language][:style] << [style]
+          new_hash[language][:style] << style
       end
     end
   end
+  new_hash[:javascript][:style] << :oo
   return new_hash
 end
