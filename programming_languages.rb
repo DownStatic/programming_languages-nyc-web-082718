@@ -7,7 +7,8 @@ def reformat_languages(languages)
         :type => type[:type]
       }
       if new_hash[language][:style] == nil
-          new_hash[language][:style] = [style]
+          new_hash[language][:style] = [new_hash[language][:style]]
+          new_hash[language] << style
       else
           new_hash[language][:style] << [style]
       end
