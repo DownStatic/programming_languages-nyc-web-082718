@@ -6,10 +6,10 @@ def reformat_languages(languages)
       new_hash[language] = {
         :type => type[:type]
       }
-      if new_hash[language][:style] == [:oo]
-          new_hash[language][:style] << style
+      if new_hash[language][:style] == nil
+          new_hash[language][:style] = style
       else
-          new_hash[language][:style] = [style]
+          new_hash[language][:style] << [style]
       end
     end
   end
